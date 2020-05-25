@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             xmlns:forms="clr-namespace:dotMorten.Xamarin.Forms;assembly=dotMorten.Xamarin.Forms.AutoSuggestBox"
+             x:Class="Amver.MobileClient.Views.UpdateProfilePage" BackgroundColor="{DynamicResource background}">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+                <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                    <StackLayout>
+                        <StackLayout Margin="15,20,0,0">
+                            <Label Text="{x:Static resources:AppResources.IAmFromCity}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Margin="15,5,15,0">
+                            <forms:AutoSuggestBox PlaceholderText="{Binding FromCity.Name}" WidthRequest="200"
+                                                  TextMemberPath="Name"
+                                                  DisplayMemberPath="Name"
+                                                  TextChanged="FromCity_TextChanged"
+                                                  SuggestionChosen="FromCity_SuggestionChosen" HeightRequest="40" BackgroundColor="{DynamicResource background}" PlaceholderTextColor="{DynamicResource darkText}" TextColor="Black"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="15,20,0,0">
+                            <Label Text="{x:Static resources:AppResources.Name}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Margin="15,5,15,0">
+                            <Editor Text="{Binding Name}" Placeholder="Name" MaxLength="25"
+                                    AutoSize="TextChanges" Keyboard="Chat" IsSpellCheckEnabled="false"
+                                    BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}" />
+                        </StackLayout>
+
+                        <StackLayout Margin="15,20,0,0">
+                            <Label Text="{x:Static resources:AppResources.Email}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Margin="15,5,15,0">
+                            <Editor Text="{Binding Email}" Placeholder="Enter your Email" MaxLength="50"
+                                    AutoSize="TextChanges" Keyboard="Chat" IsSpellCheckEnabled="false"
+                                    BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="15,20,0,0">
+                            <Label Text="{x:Static resources:AppResources.Gender}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="StartAndExpand" Margin="15,5,15,0">
+                            <Picker Title="Gender"
+                                    ItemsSource="{Binding Genders}"
+                                    SelectedItem="{Binding Gender}" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="15,20,0,0">
+                            <Label Text="{x:Static resources:AppResources.BirthDay}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Margin="15,5,15,0">
+                            <DatePicker MinimumDate="{Binding MinimumDate}"
+                                        MaximumDate="{Binding MaximumDate}"
+                                        Date="{Binding BirthDay}"
+                                        Format="D" HorizontalOptions="StartAndExpand"
+                                        FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="15,20,0,0">
+                            <Label Text="{x:Static resources:AppResources.Comment}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Margin="15,5,15,0">
+                            <Editor Text="{Binding Comment}" Placeholder="{x:Static resources:AppResources.CommentPlaceholderProfile}" MaxLength="250"
+                                    AutoSize="TextChanges" Keyboard="Chat" IsSpellCheckEnabled="false"
+                                    FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                     
+                  
+                    <Button Text="{x:Static resources:AppResources.SaveButton}" FontSize="Large"
+                            BackgroundColor="{DynamicResource button}" TextColor="{DynamicResource text}" Margin="15,0,15,30" CornerRadius="10"
+                            Clicked="OnSaveButtonClicked" FontFamily="{DynamicResource NormalFont}" />
+              
+                    </StackLayout>
+
+                </ScrollView>
+            <AbsoluteLayout
+                AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding IsBusy}">
+                <ActivityIndicator Color="Black"
+                                   AbsoluteLayout.LayoutBounds="0.5,0.5,0.1,0.1"
+                                   AbsoluteLayout.LayoutFlags="All"
+                                   IsVisible="{Binding IsBusy}"
+                                   IsRunning="{Binding IsBusy}" Scale="1.3" />
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

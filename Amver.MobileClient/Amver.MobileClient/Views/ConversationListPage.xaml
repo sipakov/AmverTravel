@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:gestures="clr-namespace:MR.Gestures;assembly=MR.Gestures"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             x:Class="Amver.MobileClient.Views.ConversationListPage">
+               <AbsoluteLayout VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+ <StackLayout BackgroundColor="{DynamicResource background}" AbsoluteLayout.LayoutBounds="0,0,1,1"
+              AbsoluteLayout.LayoutFlags="All"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+     <Label Text="{x:Static resources:AppResources.MessagesTab}"
+            FontFamily="{DynamicResource NormalFont}"
+            FontSize="30"
+            TextColor="{DynamicResource cardText}" Margin="5,10,0,0" />
+     <gestures:ListView x:Name="Conversations"
+                        IsPullToRefreshEnabled="True"
+                        RefreshCommand="{Binding RefreshCommand}"
+                        IsRefreshing="{Binding IsRefreshing}"
+                        SeparatorVisibility="None"
+                        HasUnevenRows="True"
+                        ItemsSource="{Binding Conversations}"
+                        BackgroundColor="{DynamicResource background}"
+                        SelectedItem="{Binding Item}" VerticalScrollBarVisibility="Always">
+                            <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <gestures:ViewCell LongPressing="OnListViewItemLongPressing" Tapping="OnListViewItemSelected">
+                            <Frame HasShadow="False"                                       
+                                   BackgroundColor="White" Margin="0,5,5,0" >
+                                    <Grid ColumnSpacing="0" RowSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout>
+                                            <abstractions:CircleImage
+                                                Aspect="AspectFill"
+                                                Source="{Binding ImageUri}"
+                                                VerticalOptions="CenterAndExpand"
+                                                BackgroundColor="White" HeightRequest="60"
+                                                        WidthRequest="60"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout HorizontalOptions="Start">
+                                                      <Label Text="{Binding UserName}" 
+                                                       FontFamily="{DynamicResource MediumFont}"
+                                                       LineBreakMode="WordWrap" FontSize="16" TextColor="{DynamicResource darkText}" />
+                                                </StackLayout>
+                                                 <StackLayout HorizontalOptions="StartAndExpand">
+                                                       <Label Text="{x:Static resources:AppResources.NewMessage}" 
+                                                       FontFamily="{DynamicResource MediumFont}" TextColor="{DynamicResource card}"  
+                                                       LineBreakMode="WordWrap" FontSize="13" IsVisible="{Binding IsNewMessage}"/>
+                                                </StackLayout>                                                                               
+                                            </StackLayout>
+                                            <Label Text="{Binding LastMessage}" FontFamily="{DynamicResource LightFont}" LineBreakMode="WordWrap" FontSize="16"  TextColor="{DynamicResource darkText}" />
+                                            <Label Text="{Binding ToCity}" FontFamily="{DynamicResource LightFont}" LineBreakMode="WordWrap" FontSize="11"  TextColor="{DynamicResource darkText}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                            </Grid>
+                                </Frame>
+                        </gestures:ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                        </gestures:ListView>                
+            </StackLayout>                        
+                   <AbsoluteLayout 
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        IsVisible="{Binding IsBusy}">
+            <ActivityIndicator Color="Black"
+                               AbsoluteLayout.LayoutBounds="0.5,0.5,0.1,0.1"
+                               AbsoluteLayout.LayoutFlags="All"
+                               IsVisible="{Binding IsBusy}"
+                               IsRunning="{Binding IsBusy}" Scale="1.3"/>
+        </AbsoluteLayout>
+    </AbsoluteLayout>
+</ContentPage>

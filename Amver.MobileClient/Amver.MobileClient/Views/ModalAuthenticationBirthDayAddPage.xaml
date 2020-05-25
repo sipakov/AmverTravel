@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             x:Class="Amver.MobileClient.Views.ModalAuthenticationBirthDayAddPage" BackgroundColor="{DynamicResource background}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="10,150,10,30"
+                         HorizontalOptions="CenterAndExpand">
+                <Label HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResources.SpecifyBirthDayGender}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                <Label HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="{x:Static resources:AppResources.ItCanBeEdited}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Margin="15,0,0,0">
+                     <Label Text="{x:Static resources:AppResources.BirthDay}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"></Label>
+                </StackLayout>
+               
+                 <StackLayout  VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,15,0">
+                <DatePicker MinimumDate="{Binding MinimumDate}"
+                            MaximumDate="{Binding MaximumDate}"
+                            Date="{Binding CurrentDate}" 
+                            Format="D" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+            </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout >
+   <Label Text="{x:Static resources:AppResources.Gender}" FontFamily="{DynamicResource LightFont}" Margin="15,0,0,0" TextColor="{DynamicResource darkText}"></Label>
+                </StackLayout>           
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,15,0">
+                <Picker x:Name="UserGender" 
+                        Title="UserGender"
+                        ItemsSource="{Binding UserGenders}"
+                        SelectedItem="{Binding UserGender}" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+            </StackLayout>
+                </StackLayout>
+            <Button CornerRadius="5" VerticalOptions="EndAndExpand" Text="{x:Static resources:AppResources.Next}" Clicked="OnNextButtonClicked" Margin="40,0,40,40" FontSize="Large" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource button}" TextColor="{DynamicResource text}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

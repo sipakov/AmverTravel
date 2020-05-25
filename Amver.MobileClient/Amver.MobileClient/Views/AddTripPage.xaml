@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:dotMorten.Xamarin.Forms;assembly=dotMorten.Xamarin.Forms.AutoSuggestBox"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             x:Class="Amver.MobileClient.Views.AddTripPage">
+    <ContentPage.Content>      
+        <StackLayout BackgroundColor="{DynamicResource background}">
+            <ScrollView BackgroundColor="{DynamicResource background}">
+                <StackLayout>
+                    <StackLayout BackgroundColor="{DynamicResource background}">
+                        <StackLayout Margin="0,10,0,0">
+                            <forms:AutoSuggestBox PlaceholderText="{x:Static resources:AppResources.FromCityPlaceholder}" WidthRequest="200" Margin="15,5,15,0"
+                                                  TextMemberPath="Name"
+                                                  DisplayMemberPath="Name"
+                                                  TextChanged="FromCity_TextChanged"
+                                                  SuggestionChosen="FromCity_SuggestionChosen" HeightRequest="40" BackgroundColor="{DynamicResource background}" TextColor="Black" PlaceholderTextColor="{DynamicResource darkText}"/>
+                            <forms:AutoSuggestBox PlaceholderText="{x:Static resources:AppResources.ToCountryPlaceholder}" WidthRequest="200" Margin="15,0,15,0"
+                                                  TextMemberPath="Name"
+                                                  DisplayMemberPath="Name"
+                                                  TextChanged="ToCountry_TextChanged"
+                                                  SuggestionChosen="ToCountry_SuggestionChosen" HeightRequest="40" BackgroundColor="{DynamicResource background}" TextColor="Black" PlaceholderTextColor="{DynamicResource darkText}"/>
+                            <forms:AutoSuggestBox PlaceholderText="{x:Static resources:AppResources.ToCityPlaceholder}" WidthRequest="200"
+                                                  Margin="15,0,15,0"
+                                                  HeightRequest="40"
+                                                  TextMemberPath="Name" DisplayMemberPath="Name"
+                                                  TextChanged="ToCity_TextChanged"
+                                                  SuggestionChosen="ToCity_SuggestionChosen" BackgroundColor="{DynamicResource background}" TextColor="Black" PlaceholderTextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Button Text="{x:Static resources:AppResources.AddButton}" Margin="15,20,15,0" FontSize="Medium" BackgroundColor="{DynamicResource card}"
+                                    TextColor="{DynamicResource text}" Clicked="OnAddTripButtonClicked" FontFamily="{DynamicResource NormalFont}" CornerRadius="10"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="{x:Static resources:AppResources.DateFrom}" VerticalOptions="Center" Margin="15,20,0,0" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+
+                            <DatePicker MinimumDate="{Binding CurrentDate}"
+                                        MaximumDate="{Binding MaximumDate}"
+                                        Date="{Binding DateFrom}" Margin="15,5,15,0"
+                                        Format="D" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="{x:Static resources:AppResources.DateTo}" VerticalOptions="Center" Margin="15,20,0,0" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <DatePicker MinimumDate="{Binding CurrentDate}"
+                                        MaximumDate="{Binding MaximumDate}"
+                                        Date="{Binding DateTo}" Margin="15,5,15,0"
+                                        Format="D" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}"  TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="{x:Static resources:AppResources.PreferredGender}" VerticalOptions="Center" Margin="15,20,0,0"
+                                   FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Picker Margin="15,5,15,0"
+                                    Title="Preferred Gender"
+                                    ItemsSource="{Binding PreferredGenders}"
+                                    SelectedItem="{Binding PreferredGender}" 
+                                    FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <Label Text="{x:Static resources:AppResources.Comment}" VerticalOptions="Center" Margin="15,20,0,0" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+
+                        <StackLayout>
+                            <Editor Text="{Binding Comment}" Placeholder="{x:Static resources:AppResources.CommentPlaceholder}" MaxLength="500"
+                                    Margin="15,5,15,0"
+                                    AutoSize="TextChanges" Keyboard="Chat" IsSpellCheckEnabled="false" 
+                                    FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

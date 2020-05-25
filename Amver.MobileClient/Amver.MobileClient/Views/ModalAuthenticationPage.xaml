@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             x:Class="Amver.MobileClient.Views.ModalAuthenticationPage" BackgroundColor="{DynamicResource background}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="50,50,50,0">
+                    <Entry x:Name="login" Text="{Binding Login}"
+                           Placeholder="{x:Static resources:AppResources.LoginPlaceholder}" HeightRequest="40"
+                           MaxLength="40" FontFamily="{DynamicResource NormalFont}"
+                           BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}" />
+                    <Entry x:Name="password" Text="{Binding Password}"
+                           Placeholder="{x:Static resources:AppResources.PasswordPlaceholder}" IsPassword="True"
+                           HeightRequest="40" MaxLength="20" FontFamily="{DynamicResource NormalFont}"
+                           BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}" />
+                    <Frame CornerRadius="3" BackgroundColor="{DynamicResource button}" HeightRequest="40" Padding="0" HasShadow="false">
+                        <StackLayout Orientation="Horizontal" Padding="0">
+                            <Label Text="{x:Static resources:AppResources.SignIn}" VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"
+                                   FontSize="20" FontFamily="{DynamicResource MediumFont}" TextColor="{DynamicResource text}" />
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="SignInButton" AutomationId="SignInButton"
+                                                      Tapped="OnSignInButtonClicked" />
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Margin="0,20,0,0" Text="{x:Static resources:AppResources.NewToAmver}"
+                               FontFamily="{DynamicResource NormalFont}" TextColor="{DynamicResource darkText}"
+                               FontSize="13" />
+                        <Label Margin="0,20,0,0" Text="{x:Static resources:AppResources.CreateAnAccount}"
+                               TextColor="{DynamicResource button}" FontFamily="{DynamicResource NormalFont}" FontSize="13">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnNewAccountButtonClicked" NumberOfTapsRequired="1" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Margin="50,10,50,0" IsVisible="{Binding IsCreateAnAccountVisible}">
+                    <Entry x:Name="loginRegistration" Text="{Binding LoginRegistration}"
+                           Placeholder="{x:Static resources:AppResources.LoginPlaceholder}"
+                           HeightRequest="40" MaxLength="40" FontFamily="{DynamicResource NormalFont}"
+                           BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}" />
+                    <Entry x:Name="passwordOne" Text="{Binding PasswordOne}"
+                           Placeholder="{x:Static resources:AppResources.CreatePasswordPlaceholder}"
+                           IsPassword="True" HeightRequest="40" MaxLength="20"
+                           FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}"
+                           TextColor="{DynamicResource darkText}" />
+                    <Entry x:Name="passwordTwo" Text="{Binding PasswordTwo}"
+                           Placeholder="{x:Static resources:AppResources.ConfirmPasswordPlaceholder}"
+                           IsPassword="True" HeightRequest="40" MaxLength="20"
+                           FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}"
+                           TextColor="{DynamicResource darkText}" />
+                    <Frame CornerRadius="3" BackgroundColor="{DynamicResource button}" HeightRequest="40" Padding="0" HasShadow="false"
+                           Margin="0,0,0,10">
+                        <StackLayout Orientation="Horizontal" Padding="0">
+                            <Label Text="{x:Static resources:AppResources.CreateAnAccount}"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"
+                                   FontSize="20" FontFamily="{DynamicResource MediumFont}" TextColor="{DynamicResource text}" />
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="CreateAnAccountButton"
+                                                      AutomationId="CreateAnAccountButton"
+                                                      Tapped="OnCreateAnAccountButtonClicked" />
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Margin="20,0,20,0" IsVisible="{Binding IsCreateAnAccountVisible}"
+                             HorizontalOptions="CenterAndExpand">
+                    <Label TextColor="{DynamicResource darkText}" FontFamily="{DynamicResource NormalFont}"
+                           Text="{x:Static resources:AppResources.CreateAnAccountClick}"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center" FontSize="13" />
+                    <Label VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                           HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.PrivacyPolicyLinkAuth}"
+                                      TextColor="{DynamicResource button}" FontFamily="{DynamicResource NormalFont}" FontSize="13">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnPrivacyPolicyButtonClicked" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="{x:Static resources:AppResources.And}"
+                                      TextColor="{DynamicResource darkText}" FontFamily="{DynamicResource NormalFont}"
+                                      FontSize="13" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="{x:Static resources:AppResources.LicenseLinkAuth}"
+                                      FontFamily="{DynamicResource NormalFont}"
+                                      TextColor="{DynamicResource button}" FontSize="13">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnTermOfServiceButtonClicked" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

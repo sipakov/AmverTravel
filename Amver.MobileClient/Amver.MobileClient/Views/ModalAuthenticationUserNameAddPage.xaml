@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             x:Class="Amver.MobileClient.Views.ModalAuthenticationUserNameAddPage" BackgroundColor="{DynamicResource background}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout  Margin="10,150,10,30"
+                          HorizontalOptions="CenterAndExpand">
+                <Label HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResources.EnterYourName}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+
+            </StackLayout>
+            <StackLayout>
+                <Entry x:Name="name" Text="{Binding UserName}" Placeholder="name" HeightRequest="40" MaxLength="40" Margin="40,0,40,0" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+            </StackLayout>
+            <Button CornerRadius="5" VerticalOptions="EndAndExpand" Text="{x:Static resources:AppResources.Next}" Clicked="OnNextButtonClicked"  Margin="40,0,40,40" FontSize="Large" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource button}" TextColor="{DynamicResource text}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Amver.MobileClient.Views.ModalObjectionableReasonsPage"
+             BackgroundColor="{DynamicResource background}"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <ScrollView BackgroundColor="{DynamicResource background}">
+                    <StackLayout>
+                        <Label Text="{x:Static resources:AppResources.CallDoNotWait}"
+                               FontFamily="{DynamicResource NormalFont}" FontSize="16" Margin="10,10,10,10"
+                               TextColor="{DynamicResource darkText}" />
+                        <ListView x:Name="ObjectionableReasonList"
+                                  SeparatorVisibility="None"
+                                  HasUnevenRows="True"
+                                  ItemTapped="OnListViewItemSelected" BackgroundColor="{DynamicResource background}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame HasShadow="False" Margin="0,5,0,0" BackgroundColor="White">
+                                            <Grid ColumnSpacing="0" RowSpacing="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="100*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition />
+                                                </Grid.RowDefinitions>
+                                                <StackLayout>
+                                                    <StackLayout>
+                                                        <Label Text="{Binding Title}" TextColor="{DynamicResource darkText}" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Grid>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <Label Text="{x:Static resources:AppResources.Comment}"
+                               FontFamily="{DynamicResource NormalFont}" TextColor="{DynamicResource darkText}"
+                               FontSize="16" Margin="10,10,10,10" />
+                        <Editor x:Name="EditorCommentReason" Text="{Binding Comment}" MaxLength="250" Margin="10,10,10,10"
+                                AutoSize="TextChanges" Keyboard="Chat" IsSpellCheckEnabled="false"
+                                FontFamily="{DynamicResource NormalFont}" BackgroundColor="White"
+                                TextColor="{DynamicResource darkText}" />
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

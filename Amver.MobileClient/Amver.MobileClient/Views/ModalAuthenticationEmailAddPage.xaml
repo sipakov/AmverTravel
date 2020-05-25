@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             x:Class="Amver.MobileClient.Views.ModalAuthenticationEmailAddPage" BackgroundColor="{DynamicResource background}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout  Margin="10,150,10,30"
+                       HorizontalOptions="CenterAndExpand">
+                <Label HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResources.EnterEmail}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                <Label HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResources.NoSpam}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                <Label HorizontalOptions="CenterAndExpand" Text="{x:Static resources:AppResources.EmailConfirmLater}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+            </StackLayout>
+            <StackLayout>
+                <Entry x:Name="email" Text="{Binding Email}" Placeholder="email" HeightRequest="40" MaxLength="40" Margin="40,0,40,0" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+            </StackLayout>
+            <Label HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="{x:Static resources:AppResources.SetProfilePhoto}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}" Margin="0,30,0,0"/>
+            <Button CornerRadius="5" Text="{x:Static resources:AppResources.Finish}" Clicked="OnFinishButtonClicked" VerticalOptions="EndAndExpand" Margin="40,0,40,40" FontSize="Large" BackgroundColor="{DynamicResource button}" TextColor="{DynamicResource text}" FontFamily="{DynamicResource NormalFont}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

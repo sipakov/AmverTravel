@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Amver.MobileClient.Views.ModalAbout" BackgroundColor="{DynamicResource background}">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout Margin="20,40,0,0" >
+                <Image Source="close36.png" HorizontalOptions="StartAndExpand" HeightRequest="30" WidthRequest="30">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCloseButtonClicked" NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <Label VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="15,20,15,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Questions, Problems, Suggestions:" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="amversip@gmail.com" FontFamily="{DynamicResource NormalFont}"
+                              TextColor="#4167b2" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnAboutButtonClicked" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span TextColor="{DynamicResource darkText}" Text="This is the basic functionality. If this service is interesting to people then push notifications, Facebook authentication, adding to favorites without authorization, improved chat and presentation of the application in the Google market will be available soon.  Even if you didn’t find the trip you need, create your trip please. This service is based on the principles of a social network and your feedback and care is very important for further development." FontFamily="{DynamicResource NormalFont}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

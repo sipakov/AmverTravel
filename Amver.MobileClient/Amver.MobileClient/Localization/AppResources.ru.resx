@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<!-- Search Tab -->
+	<data name="SearchTab" xml:space="preserve">
+        <value>Поиск</value>
+    </data>
+	<data name="FavouritesTab" xml:space="preserve">
+        <value>Избранное</value>
+    </data>
+	<data name="AddTab" xml:space="preserve">
+        <value>Добавить</value>
+    </data>
+	<data name="MessagesTab" xml:space="preserve">
+        <value>Сообщения</value>
+    </data>
+	<data name="CabinetTab" xml:space="preserve">
+    <value>Профиль</value>
+    </data>
+	<data name="SearchButton" xml:space="preserve">
+    <value>Расширенный поиск</value>
+    </data>
+	<data name="FromCityPlaceholder" xml:space="preserve">
+    <value>Город отправления</value>
+    </data>
+	<data name="ToCityPlaceholder" xml:space="preserve">
+    <value>Город назначения</value>
+    </data>
+	<data name="ToCountryPlaceholder" xml:space="preserve">
+    <value>Страна назначения</value>
+    </data>
+	<!-- Favourite Tab -->
+	<!-- Add Tab -->
+	<data name="DateFrom" xml:space="preserve">
+    <value>Дата отправления</value>
+    </data>
+	<data name="DateTo" xml:space="preserve">
+    <value>Дата возвращения</value>
+    </data>
+	<data name="PreferredGender" xml:space="preserve">
+    <value>Пол попутчика:</value>
+    </data>
+	<data name="Comment" xml:space="preserve">
+    <value>Комментарий</value>
+    </data>
+	<data name="CommentPlaceholder" xml:space="preserve">
+    <value>Комментарий к путешествию</value>
+    </data>
+	<data name="AddButton" xml:space="preserve">
+    <value>Создать путешествие</value>
+    </data>
+    <data name="TravelSuccessfullyAdded" xml:space="preserve">
+    <value>Путешествие успешно создано. Вы можете управлять своим путешествием в кабинете</value>
+    </data>
+    <data name="FromCityIsRequired" xml:space="preserve">
+    <value>Выберете город отправления</value>
+    </data>
+    <data name="ToCityOrToCountryIsRequired" xml:space="preserve">
+    <value>Выберете страну или город назначения</value>
+    </data>
+    <data name="DateToMustBeGreatDateFrom" xml:space="preserve">
+    <value>Дата возвращения должна быть больше даты отправления</value>
+    </data>
+    <data name="ToCityFromCityMustBeDifferent" xml:space="preserve">
+    <value>Город отправления не может совпадать с городом прибытия</value>
+    </data>
+    <data name="ToCityToCountryAndToCountryMustBeEqual" xml:space="preserve">
+    <value>Город назначения должен принадлежать соответствующей стране</value>
+    </data>
+	<!-- Messages Tab -->
+    <data name="GoToTravel" xml:space="preserve">
+    <value>Перейти к путешествию</value>
+    </data>
+    <data name="GoToProfile" xml:space="preserve">
+    <value>Перейти в профиль</value>
+    </data>
+    <data name="ToPreposition" xml:space="preserve">
+    <value>В</value>
+    </data>
+	<!-- Cabinet Tab -->
+	<data name="PrivacyPolicyLink" xml:space="preserve">
+    <value>Политика конфиденциальности</value>
+    </data>
+	<data name="LicenseLink" xml:space="preserve">
+    <value>Лицензионное соглашение</value>
+    </data>
+	<data name="LogOutButtonTitle" xml:space="preserve">
+    <value>Выйти</value>
+    </data>
+	<data name="LogInButtonTitle" xml:space="preserve">
+    <value>Вход/Регистрация</value>
+    </data>
+    <data name="ActiveTravel" xml:space="preserve">
+    <value>Активное</value>
+    </data>
+    <data name="CompletedTravel" xml:space="preserve">
+    <value>Завершённое</value>
+    </data>
+    <data name="IncompletedTravel" xml:space="preserve">
+    <value>Незавешённое</value>
+    </data>
+	<!-- Chat page -->
+	<data name="Connecting" xml:space="preserve">
+    <value>Соединение</value>
+    </data>
+	<data name="SendButton" xml:space="preserve">
+    <value>Отправить</value>
+    </data>
+    <data name="ChatMessagePlaceholder" xml:space="preserve">
+    <value>Сообщение</value>
+    </data>
+    <data name="ChatIsBlockedPlaceholder" xml:space="preserve">
+    <value>Чат заблокирован</value>
+    </data>
+    <data name="QuestionDoYouWantToDeleteTheConversation" xml:space="preserve">
+    <value>Вы действительно хотите удалить диалог?</value>
+    </data>
+    <data name="ConversationSuccessfullyDeleted" xml:space="preserve">
+    <value>Диалог успешно удалён</value>
+    </data>
+	<!-- ModalAuthenticationBirthDayAddPage -->
+	<data name="SpecifyBirthDayGender" xml:space="preserve">
+    <value>Укажите дату своего рождения и пол</value>
+    </data>
+	<data name="ItCanBeEdited" xml:space="preserve">
+    <value>Вы можете изменить всю информацию в своем профиле</value>
+    </data>
+	<data name="BirthDay" xml:space="preserve">
+    <value>День Рождения</value>
+    </data>
+	<data name="Gender" xml:space="preserve">
+    <value>Пол</value>
+    </data>
+	<data name="Next" xml:space="preserve">
+    <value>Далее</value>
+    </data>
+    <data name="EmailIsNotValid" xml:space="preserve">
+    <value>Введите валидный адрес электронной почты</value>
+    </data>
+	<!-- ModalAuthenticationEmailAddPage -->
+	<data name="EnterEmail" xml:space="preserve">
+    <value>Укажите свой адрес электронной почты</value>
+    </data>
+	<data name="NoSpam" xml:space="preserve">
+    <value>Никакого спама</value>
+    </data>
+	<data name="EmailConfirmLater" xml:space="preserve">
+    <value>Вы можете подтвердить адрес почты позже</value>
+    </data>
+	<data name="Finish" xml:space="preserve">
+    <value>Завершить</value>
+    </data>
+	<!-- ModalAuthenticationPage -->
+	<data name="SignIn" xml:space="preserve">
+    <value>Вход</value>
+    </data>
+	<data name="NewToAmver" xml:space="preserve">
+    <value>Не зарегистрированы?</value>
+    </data>
+	<data name="CreateAnAccount" xml:space="preserve">
+    <value>Создайте аккаунт</value>
+    </data>
+	<data name="CreateAnAccountClick" xml:space="preserve">
+    <value>Нажимая кнопку "Создать аккаунт" я соглашаюсь с </value>
+    </data>
+	<data name="And" xml:space="preserve">
+    <value> и </value>
+    </data>
+    <data name="LoginPlaceholder" xml:space="preserve">
+    <value>логин</value>
+    </data>
+    <data name="PasswordPlaceholder" xml:space="preserve">
+    <value>пароль</value>
+    </data>
+    <data name="CreatePasswordPlaceholder" xml:space="preserve">
+    <value>придумайте пароль</value>
+    </data>
+    <data name="ConfirmPasswordPlaceholder" xml:space="preserve">
+    <value>подтвердите пароль</value>
+    </data>
+         <data name="PrivacyPolicyLinkAuth" xml:space="preserve">
+    <value>Политикой конфиденциальности</value>
+    </data>
+    <data name="LicenseLinkAuth" xml:space="preserve">
+    <value>Лицензионным соглашением</value>
+    </data>
+    <data name="FieldIsAnEmpty" xml:space="preserve">
+    <value>Поле не заполнено</value>
+    </data>
+    <data name="LoginIsNotValid" xml:space="preserve">
+    <value>Логин содержит недопустимые символы</value>
+    </data>
+    <data name="PasswordIsNotValid" xml:space="preserve">
+    <value>Пароль содержит запрещённые символы</value>
+    </data>
+    <data name="PasswordsAreNotEqual" xml:space="preserve">
+    <value>Пароли должны совпадать</value>
+    </data>
+	<!-- ModalAuthenticationUserNameAddPage -->
+	<data name="EnterYourName" xml:space="preserve">
+    <value>Укажите свое имя</value>
+    </data>
+    <data name="UserNameIsNotValid" xml:space="preserve">
+    <value>Имя содержит недопустимые символы</value>
+    </data>
+	<!-- MyProfilePage -->
+	<data name="Edit" xml:space="preserve">
+    <value>Редактировать</value>
+    </data>
+	<data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+    </data>
+	<data name="FromCityLocation" xml:space="preserve">
+    <value>Я живу в городе</value>
+    </data>
+	<data name="Email" xml:space="preserve">
+    <value>Адрес электронной почты</value>
+    </data>
+    <data name="Age" xml:space="preserve">
+    <value>Возраст:</value>
+    </data>
+    <data name="SelectProfileImageButton" xml:space="preserve">
+    <value>Изменить фото профиля</value>
+    </data>
+    <data name="ImageProcessing" xml:space="preserve">
+    <value>Подготовка изображения</value>
+    </data>
+    <data name="Cancel" xml:space="preserve">
+    <value>Назад</value>
+    </data>
+    <data name="Camera" xml:space="preserve">
+    <value>Сделать фото</value>
+    </data>
+    <data name="Gallery" xml:space="preserve">
+    <value>Выбрать из библиотеки</value>
+    </data>
+    <data name="ConfirmAction" xml:space="preserve">
+    <value>Подтверждение действия</value>
+    </data>
+    <data name="ConfirmDeleteProfile" xml:space="preserve">
+    <value>Вы точно хотите удалить свой профиль?</value>
+    </data>
+    <data name="ConfirmActionYes" xml:space="preserve">
+    <value>Да</value>
+    </data>
+    <data name="ConfirmActionNo" xml:space="preserve">
+    <value>Нет</value>
+    </data>
+    <data name="Notification" xml:space="preserve">
+    <value>Уведомление</value>
+    </data>
+    <data name="NotificationProfileSuccessfullyDeleted" xml:space="preserve">
+    <value>Профиль успешно удален</value>
+    </data>
+    <data name="Ok" xml:space="preserve">
+    <value>Понятно</value>
+    </data>
+    <data name="NotificationError" xml:space="preserve">
+    <value>Упс! Произошла ошибка</value>
+    </data>
+    <data name="NotificationDeviceDoesNotSupportedThisFunction" xml:space="preserve">
+    <value>Ваше устройство не поддерживает эту функцию</value>
+    </data>
+    <data name="NotificationCouldNotGetTheImage" xml:space="preserve">
+    <value>Не удалось выбрать изображение. Попробуйте еще раз</value>
+    </data>
+    <!-- UserProfilePage -->
+    <data name="YouHaveBeenBlocked" xml:space="preserve">
+    <value>Вы были заблокированы этим пользователем</value>
+    </data>
+    <data name="Report" xml:space="preserve">
+    <value>Пожаловаться</value>
+    </data>
+    <data name="Block" xml:space="preserve">
+    <value>Заблокировать</value>
+    </data>
+    <data name="Unblock" xml:space="preserve">
+    <value>Разблокировать</value>
+    </data>
+    <data name="BlockUser" xml:space="preserve">
+    <value>больше не сможет найти ваш профиль и поездки. Пользователь не узнает, что вы его заблокировали</value>
+    </data>
+    <data name="LoginBeforeBlocking" xml:space="preserve">
+    <value>Авторизируйтесь перед тем как заблоровать этого пользователя</value>
+    </data>
+    <data name="UserSuccessfullyBlocked" xml:space="preserve">
+    <value>Пользователь заблокирован</value>
+    </data>
+     <data name="UserSuccessfullyUnblocked" xml:space="preserve">
+    <value>Пользователь разблокирован</value>
+    </data>
+    <data name="RegisteredDate" xml:space="preserve">
+    <value>Дата регистрации</value>
+    </data>
+    <!-- EulaPage -->
+    <data name="Eula" xml:space="preserve">
+    <value>AmverTravel Авторские права (c) 2020
+            
+*** ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ КОНЕЧНОГО ПОЛЬЗОВАТЕЛЯ***
+
+ВАЖНО: ПРОЧИТАЙТЕ ДАННОЕ СОГЛАШЕНИЕ ВНИМАТЕЛЬНО ПЕРЕД ИСПОЛЬЗОВАНИЕМ AMVERTRAVEL.
+        
+1. ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ
+Получая, открывая пакет файлов и / или используя AmverTravel (Программное обеспечение), содержащее это программное обеспечение, вы соглашаетесь с тем, что настоящее Лицензионное соглашение с конечным пользователем (EULA) является юридически обязывающим и действующим договором и соглашаетесь с ним соблюдать. Вы соглашаетесь соблюдать законы об интеллектуальной собственности и все условия настоящего Соглашения. Если у вас нет другого лицензионного соглашения, подписанного Станиславом Сипаковым, ваше использование AmverTravel означает ваше согласие с данным лицензионным соглашением и гарантией. В соответствии с условиями настоящего Соглашения, Станислав Сипаков предоставляет вам ограниченную, неисключительную, непередаваемую лицензию без права на сублицензию на использование AmverTravel в соответствии с настоящим Соглашением и любым другим письменным соглашением со Станиславом Сипаковым. Станислав Сипаков не передает вам название AmverTravel; предоставленная вам лицензия не является продажей. Это соглашение является обязательным юридическим соглашением между Станиславом Сипаковым и покупателями или пользователями AmverTravel. Если вы не согласны с этим соглашением, удалите AmverTravel со своего устройства сейчас и, если применимо, незамедлительно верните Станиславу Сипакову по почте любые копии AmverTravel и сопутствующую документацию и упаковку, которые у вас есть.
+
+2. ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ 
+2.1 Ограничения использования
+Вы соглашаетесь с тем, что достигли совершеннолетия. Вы должны использовать AmverTravel в соответствии со всеми применимыми законами, а не для каких-либо незаконных целей. Без ограничения вышеизложенного, использование, показ или распространение AmverTravel вместе с материалом, порнографического, расистского, вульгарным, непристойным, дискредитирующим, клеветническим, оскорбительным, продвигая ненависть, дискриминацию или отображая предрассудков на основе религии, этнического происхождения, расы, сексуальной ориентации или возраст строго запрещен. Мы обязуемся удалить нежелательный контент и пользователя в случае рекламации в течение 24 часов. Жалобы на неприемлемый контент, который возможно зарегистрирован в пользовательской системе, однако, если вы видите неприемлемый контент, мы не несем ответственности
+
+2.2 Ограничения авторских прав
+AmverTraver содержит материалы, защищенные авторским правом, коммерческую тайну и другие материалы, являющиеся собственностью компании. Вы не должны и не должны пытаться модифицировать, перепроектировать, разбирать или декомпилировать AmverTravel. Вы также не можете создавать какие-либо производные работы или другие работы, основанные на AmverTravel или полученные из него полностью или частично. Имя, логотип и графический файл Станислава Сипакова, представляющие AmverTravel, никоим образом не должны использоваться для продвижения продуктов, разработанных с помощью AmverTravel. Станислав Сипаков сохраняет за собой единоличное и исключительное право собственности на все права, права и интересы в AmverTravel и все права на интеллектуальную собственность, связанные с ним. Закон об авторском праве и международные соглашения об авторском праве защищают все части AmverTravel, продукты и услуги. Никакая программа, код, часть, изображение, аудиосэмпл или текст не могут быть скопированы или использованы пользователем каким-либо образом, кроме как в рамках однопользовательской программы. Все права, прямо не предоставленные по настоящему Соглашению, сохраняются за Станиславом Сипаковым.
+            
+2.3 Ограничение ответственности
+Вы избавите Станислава Сипакова, его сотрудников, агентов и дистрибьюторов от любых претензий, судебных разбирательств, требований и издержек, связанных с использованием Программного обеспечения Станислава Сипакова или каким-либо образом связанного с ним. Ни при каких обстоятельствах (включая, помимо прочего, в случае небрежности) Станислав Сипаков, его сотрудники, агенты или дистрибьюторы не несут ответственности за любые косвенные, случайные, косвенные, специальные или штрафные убытки, в том числе (включая, помимо прочего, убытки за потерю прибыль, потеря использования, перерыв в работе, потеря информации или данных, или материальная потеря), в связи с или вытекающие из или связанные с этим Соглашением, AmverTravel или использованием или невозможностью использования AmverTravel или предоставлением, выполнением или использованием любые другие вопросы по настоящему Соглашению, основанные на контракте, правонарушении или любой другой теории, включая небрежность.
+
+2.4 Гарантии
+За исключением случаев, прямо оговоренных в письменной форме, Станислав Сипаков не дает никаких заверений или гарантий в отношении данного Программного обеспечения и прямо исключает все другие гарантии, явные или подразумеваемые, устные или письменные, включая, без ограничения, любые подразумеваемые гарантии товарного качества или пригодности для конкретной цели
+
+2.5 Соблюдение законодательства
+Настоящее Соглашение регулируется действующим законодательством Российской Федерации. Настоящим вы безоговорочно вступаете в отношения и подчиняетесь неисключительной юрисдикции судов Российской Федерации. Если какое-либо положение считается незаконным, недействительным или иным образом неисполнимым, то это положение считается отделимым от настоящей Лицензии и не влияет на действительность и применимость любых других положений           
+
+2.6 Расторжение
+Любое несоблюдение положений и условий настоящего Соглашения приведет к автоматическому и немедленному прекращению действия этой лицензии. После прекращения действия данной лицензии, предоставленной в настоящем документе, по любой причине, вы соглашаетесь немедленно прекратить использование AmverTravel и уничтожить все копии AmverTravel, предоставленные в соответствии с настоящим Соглашением. Принятые вами финансовые обязательства остаются в силе после истечения срока действия или прекращения действия данной лицензии
+            
+3. ОТКАЗ ОТ ГАРАНТИЙ
+НАСТОЯЩЕЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ И СОПУТСТВУЮЩИЕ ФАЙЛЫ ПРЕДОСТАВЛЯЮТСЯ (КАК ЕСТЬ) И БЕЗ ГАРАНТИЙ, КАСАЮЩИХСЯ ЭФФЕКТИВНОСТИ ИЛИ ТОВАРА, ИЛИ ЛЮБЫХ ДРУГИХ ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ. НАСТОЯЩИЙ ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ ЗА ВСЕ ФАЙЛЫ, СОЗДАННЫЕ И ИЗМЕНЕННЫЕ AmverTravel
+            
+4. СОГЛАСИЕ НА ОБРАБОТКУ ДАННЫХ
+Вы соглашаетесь с тем, что Станислав Сипаков может собирать и использовать информацию, собранную любым способом, в рамках услуг по поддержке продуктов, предоставляемых вам, если таковые имеются, связанных с AmverTravel. Станислав Сипаков может также использовать эту информацию для предоставления вам уведомлений, которые могут быть полезны или интересны для вас.                                 
+        </value>
+    </data>
+    <data name="IAgreeButton" xml:space="preserve">
+    <value>Я согласен</value>
+    </data>
+    <!--  ModalObjectionableReasonsPage  -->
+     <data name="AreYouSure" xml:space="preserve">
+    <value>Вы уверены?</value>
+    </data>
+    <data name="YourReportHasBeenSentSuccessfully" xml:space="preserve">
+    <value>Ваша жалоба успешно отправлена</value>
+    </data>
+    <data name="CallDoNotWait" xml:space="preserve">
+    <value>Если вам угрожает опасность - звоните в экстренные службы - не ждите</value>
+    </data>
+    <!--  ModalPrivacyPolicyPage  -->
+    <data name="PrivacyPolicy" xml:space="preserve">
+    <value>AmverTravel Политика конфеденциальности
+     
+1. Ваша конфиденциальность важна для нас. Политика AmverTravel уважает вашу конфиденциальность в отношении любой информации, которую мы можем получить от вас через наше приложение AmverTravel.
+                      
+2. Мы запрашиваем личную информацию только тогда, когда она нам действительно необходима для предоставления вам услуг. Мы собираем его честными и законными способами, с вашего ведома и согласия. Мы также даем вам знать, почему мы собираем его и как он будет использоваться.
+            
+3. Мы храним собранную информацию только столько времени, сколько необходимо для предоставления вам запрошенной услуги. Какие данные мы храним, мы будем защищать с помощью коммерчески приемлемых средств для предотвращения потери и кражи, а также несанкционированного доступа, разглашения, копирования, использования или изменения.    
+            
+4. Мы не передаем какую-либо личную информацию публично или третьим лицам, кроме случаев, когда это требуется по закону.  
+            
+5. Наше приложение может ссылаться на внешние сайты, которые не управляются нами. Пожалуйста, имейте в виду, что мы не контролируем содержимое и методы этих сайтов и не можем принять на себя ответственность за их соответствующие политики конфиденциальности.  
+            
+6. Вы можете отклонить наш запрос о предоставлении вашей личной информации при том понимании, что мы не сможем предоставить вам некоторые из ваших желаемых услуг.         
+            
+7. Ваше дальнейшее использование нашего веб-сайта или мобильного приложения будет рассматриваться как принятие нашей практики в отношении конфиденциальности и личной информации. Если у вас есть какие-либо вопросы о том, как мы обрабатываем пользовательские данные и личную информацию, не стесняйтесь обращаться к нам.  
+                       
+8. Ограничение по возрасту: 18 лет или совершеннолетие в соответствии с местным законодательством.
+            
+9. Эта политика действует с 25 сентября 2019 года.
+        </value>
+    </data>
+    <!--  MyTripPage  -->
+    <data name="QuestionDoYouWantToDeleteTheTravel" xml:space="preserve">
+    <value>Вы действительно хотитите удалить это путешествие?</value>
+    </data>
+    <data name="TravelSuccessfullyDeleted" xml:space="preserve">
+    <value>Путешествие успешно удалено</value>
+    </data>
+    <data name="QuestionDidTheTravelTakePlace" xml:space="preserve">
+    <value>Путешествие состоялось?</value>
+    </data>
+	<!--  Others  -->
+    <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+    </data>
+	<data name="SaveButton" xml:space="preserve">
+    <value>Сохранить</value>
+    </data>
+	<data name="IAmFromCity" xml:space="preserve">
+    <value>Я из города</value>
+    </data>
+	<data name="CommentPlaceholderProfile" xml:space="preserve">
+    <value>О себе</value>
+    </data>
+	<data name="EnterYourCity" xml:space="preserve">
+    <value>введите свой город</value>
+    </data>
+	<data name="GenderMale" xml:space="preserve">
+    <value>Мужчина</value>
+    </data>
+	<data name="ProfileUpdated" xml:space="preserve">
+    <value>Профиль успешно обновлен</value>
+    </data>
+	<data name="UserAge" xml:space="preserve">
+    <value>Возраст:</value>
+    </data>
+	<data name="SendMessageButton" xml:space="preserve">
+    <value>Сообщение ></value>
+    </data>
+    <data name="FromCountryPlaceholder" xml:space="preserve">
+    <value>Страна отправления</value>
+    </data>
+	<data name="CreatedDate" xml:space="preserve">
+    <value>Дата создания</value>
+    </data>
+	<data name="ToFavorites" xml:space="preserve">
+    <value>В Избранное</value>
+    </data>
+	<data name="InFavorites" xml:space="preserve">
+    <value>В Избранном</value>
+    </data>
+	<data name="Travels" xml:space="preserve">
+    <value>Путешествия</value>
+    </data>
+    <data name="SearchNow" xml:space="preserve">
+    <value>Искать</value>
+    </data>
+	<data name="Complete" xml:space="preserve">
+    <value>Завершить путешествие</value>
+    </data>
+	<data name="TravelSuccessfullyCompleted" xml:space="preserve">
+    <value>Путешествие завершено</value>
+    </data>
+    <data name="NudityOrSexualActivity" xml:space="preserve">
+    <value>Нагота или сексуальная активность</value>
+    </data>
+    <data name="HateSpeechOrSymbols" xml:space="preserve">
+    <value>Ненависть или оскорбительные слова</value>
+    </data>
+    <data name="ViolenceOrDangerousOrganizations" xml:space="preserve">
+    <value>Опасные организации</value>
+    </data>
+    <data name="SaleOfIllegalOrRegularGoods" xml:space="preserve">
+    <value>Продажа нелегальных или иных товаров</value>
+    </data>
+    <data name="BullyingOrHarassment" xml:space="preserve">
+    <value>Запугивание или домогательство</value>
+    </data>
+    <data name="IntellectualPropertyViolation" xml:space="preserve">
+    <value>Нарушение интеллектуальной собственности</value>
+    </data>
+    <data name="SuicideOrSelfInjury" xml:space="preserve">
+    <value>Принуждение к суициду</value>
+    </data>
+    <data name="ScamOrFraud" xml:space="preserve">
+    <value>Мошенничество</value>
+    </data>
+    <data name="FalseInformation" xml:space="preserve">
+    <value>Ложная информация</value>
+    </data>
+	<data name="FavoriteTravels" xml:space="preserve">
+    <value>Избранное</value>
+    </data>
+	<data name="MyTravels" xml:space="preserve">
+    <value>Мои путешествия</value>
+    </data>
+	<data name="NewMessage" xml:space="preserve">
+    <value>новое сообщение</value>
+    </data>
+	<data name="AgeConstraint" xml:space="preserve">
+    <value>Вы должны быть чуть постарше</value>
+    </data>
+	<data name="SetProfilePhoto" xml:space="preserve">
+    <value>Не забудьте установить свое фото в профиле. Это поможет быстрее найти попутчика.</value>
+    </data>
+</root>

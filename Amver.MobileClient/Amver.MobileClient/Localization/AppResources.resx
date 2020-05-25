@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <!-- 
+      Microsoft ResX Schema 
+      
+      Version 2.0
+      
+      The primary goals of this format is to allow a simple XML format 
+      that is mostly human readable. The generation and parsing of the 
+      various data types are done through the TypeConverter classes 
+      associated with the data types.
+      
+      Example:
+      
+      ... ado.net/XML headers & schema ...
+      <resheader name="resmimetype">text/microsoft-resx</resheader>
+      <resheader name="version">2.0</resheader>
+      <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+      <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+      <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+      <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+      <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+          <value>[base64 mime encoded serialized .NET Framework object]</value>
+      </data>
+      <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+          <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+          <comment>This is a comment</comment>
+      </data>
+                  
+      There are any number of "resheader" rows that contain simple 
+      name/value pairs.
+      
+      Each data row contains a name, and value. The row also contains a 
+      type or mimetype. Type corresponds to a .NET class that support 
+      text/value conversion through the TypeConverter architecture. 
+      Classes that don't support this are serialized and stored with the 
+      mimetype set.
+      
+      The mimetype is used for serialized objects, and tells the 
+      ResXResourceReader how to depersist the object. This is currently not 
+      extensible. For a given mimetype the value must be set accordingly:
+      
+      Note - application/x-microsoft.net.object.binary.base64 is the format 
+      that the ResXResourceWriter will generate, however the reader can 
+      read any of the formats listed below.
+      
+      mimetype: application/x-microsoft.net.object.binary.base64
+      value   : The object must be serialized with 
+              : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+              : and then encoded with base64 encoding.
+      
+      mimetype: application/x-microsoft.net.object.soap.base64
+      value   : The object must be serialized with 
+              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+              : and then encoded with base64 encoding.
+  
+      mimetype: application/x-microsoft.net.object.bytearray.base64
+      value   : The object must be serialized into a byte array 
+              : using a System.ComponentModel.TypeConverter
+              : and then encoded with base64 encoding.
+      -->
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <!-- Search Tab -->
+    <data name="SearchTab" xml:space="preserve">
+        <value>SEARCH</value>
+    </data>
+    <data name="FavouritesTab" xml:space="preserve">
+        <value>FAVOURITES</value>
+    </data>
+    <data name="AddTab" xml:space="preserve">
+        <value>ADD</value>
+    </data>
+    <data name="MessagesTab" xml:space="preserve">
+        <value>MESSAGES</value>
+    </data>
+    <data name="CabinetTab" xml:space="preserve">
+    <value>CABINET</value>
+    </data>
+    <data name="SearchButton" xml:space="preserve">
+    <value>Advanced search</value>
+    </data>
+    <data name="FromCityPlaceholder" xml:space="preserve">
+    <value>From city</value>
+    </data>
+    <data name="ToCityPlaceholder" xml:space="preserve">
+    <value>To city</value>
+    </data>
+    <data name="ToCountryPlaceholder" xml:space="preserve">
+    <value>To country</value>
+    </data>
+    <!-- Favourite Tab -->
+    <!-- Add Tab -->
+    <data name="DateFrom" xml:space="preserve">
+    <value>Date from</value>
+    </data>
+    <data name="DateTo" xml:space="preserve">
+    <value>Date To</value>
+    </data>
+    <data name="PreferredGender" xml:space="preserve">
+    <value>Preferred Gender:</value>
+    </data>
+    <data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+    </data>
+    <data name="CommentPlaceholder" xml:space="preserve">
+    <value>Enter comment here</value>
+    </data>
+    <data name="AddButton" xml:space="preserve">
+    <value>Add travel</value>
+    </data>
+    <data name="TravelSuccessfullyAdded" xml:space="preserve">
+    <value>Travel is successfully added. You can view and edit your travel in your cabinet</value>
+    </data>
+    <data name="FromCityIsRequired" xml:space="preserve">
+    <value>"From city" is required</value>
+    </data>
+    <data name="ToCityOrToCountryIsRequired" xml:space="preserve">
+    <value>Сhoose city or country of destination</value>
+    </data>
+    <data name="DateToMustBeGreatDateFrom" xml:space="preserve">
+    <value>Return date (Date To) must be greater than departure date (Date From)</value>
+    </data>
+    <data name="ToCityFromCityMustBeDifferent" xml:space="preserve">
+    <value>Destination city (To City) and departure city (From City) must be different</value>
+    </data>
+    <data name="ToCityToCountryAndToCountryMustBeEqual" xml:space="preserve">
+    <value>Destination city must belong to the respective country</value>
+    </data>
+    <!-- Messages Tab -->
+    <data name="GoToTravel" xml:space="preserve">
+    <value>Go to travel</value>
+    </data>
+    <data name="GoToProfile" xml:space="preserve">
+    <value>Go to profile</value>
+    </data>
+    <data name="ToPreposition" xml:space="preserve">
+    <value>To</value>
+    </data>
+    <!-- Cabinet Tab -->
+    <data name="PrivacyPolicyLink" xml:space="preserve">
+    <value>Privacy Policy</value>
+    </data>
+    <data name="LicenseLink" xml:space="preserve">
+    <value>License</value>
+    </data>
+    <data name="LogOutButtonTitle" xml:space="preserve">
+    <value>Sign Out</value>
+    </data>
+    <data name="LogInButtonTitle" xml:space="preserve">
+    <value>Sign In/Sign Up</value>
+    </data>
+    <data name="ActiveTravel" xml:space="preserve">
+    <value>Active</value>
+    </data>
+    <data name="CompletedTravel" xml:space="preserve">
+    <value>Completed</value>
+    </data>
+    <data name="IncompletedTravel" xml:space="preserve">
+    <value>Incompleted</value>
+    </data>
+    <!-- Chat page -->
+    <data name="Connecting" xml:space="preserve">
+    <value>Connecting</value>
+    </data>
+    <data name="SendButton" xml:space="preserve">
+    <value>Send</value>
+    </data>
+    <data name="ChatMessagePlaceholder" xml:space="preserve">
+    <value>Message</value>
+    </data>
+    <data name="ChatIsBlockedPlaceholder" xml:space="preserve">
+    <value>Chat is blocked</value>
+    </data>
+    <data name="QuestionDoYouWantToDeleteTheConversation" xml:space="preserve">
+    <value>Do you want to delete the conversation?</value>
+    </data>
+    <data name="ConversationSuccessfullyDeleted" xml:space="preserve">
+    <value>Conversation is deleted</value>
+    </data>
+    <!-- ModalAuthenticationBirthDayAddPage -->
+    <data name="SpecifyBirthDayGender" xml:space="preserve">
+    <value>Specify date of birth and your gender</value>
+    </data>
+    <data name="ItCanBeEdited" xml:space="preserve">
+    <value>It can be edited in your profile</value>
+    </data>
+    <data name="BirthDay" xml:space="preserve">
+    <value>Birth Day</value>
+    </data>
+    <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+    </data>
+    <data name="Next" xml:space="preserve">
+    <value>Next</value>
+    </data>
+    <data name="EmailIsNotValid" xml:space="preserve">
+    <value>Email is not valid</value>
+    </data>
+    <!-- ModalAuthenticationEmailAddPage -->
+    <data name="EnterEmail" xml:space="preserve">
+    <value>Enter your email address</value>
+    </data>
+    <data name="NoSpam" xml:space="preserve">
+    <value>No spam</value>
+    </data>
+    <data name="EmailConfirmLater" xml:space="preserve">
+    <value>You can confirm mail later</value>
+    </data>
+    <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+    </data>
+    <!-- ModalAuthenticationPage -->
+    <data name="SignIn" xml:space="preserve">
+    <value>Sign In</value>
+    </data>
+    <data name="NewToAmver" xml:space="preserve">
+    <value>New to Amver?</value>
+    </data>
+    <data name="CreateAnAccount" xml:space="preserve">
+    <value>Create an account</value>
+    </data>
+    <data name="CreateAnAccountClick" xml:space="preserve">
+    <value>By clicking Create an account you agree with </value>
+    </data>
+    <data name="And" xml:space="preserve">
+    <value>and</value>
+    </data>
+    <data name="LoginPlaceholder" xml:space="preserve">
+    <value>login</value>
+    </data>
+    <data name="PasswordPlaceholder" xml:space="preserve">
+    <value>password</value>
+    </data>
+    <data name="CreatePasswordPlaceholder" xml:space="preserve">
+    <value>create password</value>
+    </data>
+    <data name="ConfirmPasswordPlaceholder" xml:space="preserve">
+    <value>confirm password</value>
+    </data>
+     <data name="PrivacyPolicyLinkAuth" xml:space="preserve">
+    <value>Privacy Policy</value>
+    </data>
+    <data name="LicenseLinkAuth" xml:space="preserve">
+    <value>License</value>
+    </data>
+    <data name="FieldIsAnEmpty" xml:space="preserve">
+    <value>Field is an empty</value>
+    </data>
+    <data name="LoginIsNotValid" xml:space="preserve">
+    <value>Login contains illegal characters</value>
+    </data>
+    <data name="PasswordIsNotValid" xml:space="preserve">
+    <value>Password contains illegal characters</value>
+    </data>
+    <data name="PasswordsAreNotEqual" xml:space="preserve">
+    <value>Passwords are not equal</value>
+    </data>
+    <!-- ModalAuthenticationUserNameAddPage -->
+    <data name="EnterYourName" xml:space="preserve">
+    <value>Enter your name</value>
+    </data>
+    <data name="UserNameIsNotValid" xml:space="preserve">
+    <value>Name contains illegal characters</value>
+    </data>
+    <!-- MyProfilePage -->
+    <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    </data>
+    <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    </data>
+    <data name="FromCityLocation" xml:space="preserve">
+    <value>From</value>
+    </data>
+    <data name="Email" xml:space="preserve">
+    <value>Email</value>
+    </data>
+     <data name="Age" xml:space="preserve">
+    <value>Age:</value>
+    </data>
+    <data name="SelectProfileImageButton" xml:space="preserve">
+    <value>Select Profile Image</value>
+    </data>
+    <data name="ImageProcessing" xml:space="preserve">
+    <value>Image Processing</value>
+    </data>
+    <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    </data>
+    <data name="Camera" xml:space="preserve">
+    <value>Camera</value>
+    </data>
+    <data name="Gallery" xml:space="preserve">
+    <value>Gallery</value>
+    </data>
+    <data name="ConfirmAction" xml:space="preserve">
+    <value>Confirm action</value>
+    </data>
+    <data name="ConfirmDeleteProfile" xml:space="preserve">
+    <value>Do you want to delete your profile?</value>
+    </data>
+    <data name="ConfirmActionYes" xml:space="preserve">
+    <value>Yes</value>
+    </data>
+    <data name="ConfirmActionNo" xml:space="preserve">
+    <value>No</value>
+    </data>
+    <data name="Notification" xml:space="preserve">
+    <value>Notification</value>
+    </data>
+    <data name="NotificationProfileSuccessfullyDeleted" xml:space="preserve">
+    <value>Profile successfully deleted</value>
+    </data>
+    <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+    </data>
+    <data name="NotificationError" xml:space="preserve">
+    <value>Oops. An error has occurred</value>
+    </data>
+    <data name="NotificationDeviceDoesNotSupportedThisFunction" xml:space="preserve">
+    <value>Your device does not currently support this function</value>
+    </data>
+    <data name="NotificationCouldNotGetTheImage" xml:space="preserve">
+    <value>Could not get the image. Try again</value>
+    </data>
+     <!-- UserProfilePage -->
+    <data name="YouHaveBeenBlocked" xml:space="preserve">
+    <value>You have been blocked by this user</value>
+    </data>
+    <data name="Report" xml:space="preserve">
+    <value>Report</value>
+    </data>
+    <data name="Block" xml:space="preserve">
+    <value>Block</value>
+    </data>
+    <data name="Unblock" xml:space="preserve">
+    <value>Unblock</value>
+    </data>
+    <data name="BlockUser" xml:space="preserve">
+    <value>won't be able to find your profile, trips. The user does not know that you blocked him</value>
+    </data>
+    <data name="LoginBeforeBlocking" xml:space="preserve">
+    <value>Login before blocking</value>
+    </data>
+    <data name="UserSuccessfullyBlocked" xml:space="preserve">
+    <value>User successfully blocked</value>
+    </data>
+    <data name="UserSuccessfullyUnblocked" xml:space="preserve">
+    <value>User successfully unblocked</value>
+    </data>
+    <data name="RegisteredDate" xml:space="preserve">
+    <value>RegisteredDate</value>
+    </data>
+     <!-- EulaPage -->
+    <data name="Eula" xml:space="preserve">
+    <value>AmverTravel Copyright (c) 2020
+            
+*** END USER LICENSE AGREEMENT ***
+            
+IMPORTANT: PLEASE READ THIS LICENSE CAREFULLY BEFORE USING THIS SOFTWARE.
+            
+1. LICENSE
+By receiving, opening the file package, and/or using AmverTravel (Software) containing this software, you agree that this End User User License Agreement (EULA) is a legally binding and valid contract and agree to be bound by it. You agree to abide by the intellectual property laws and all of the terms and conditions of this Agreement. Unless you have a different license agreement signed by Stanislav Sipakov your use of AmverTravel indicates your acceptance of this license agreement and warranty. Subject to the terms of this Agreement, Stanislav Sipakov grants to you a limited, non-exclusive, non-transferable license, without right to sub-license, to use AmverTravel in accordance with this Agreement and any other written agreement with Stanislav Sipakov. Stanislav Sipakov does not transfer the title of AmverTravel to you; the license granted to you is not a sale. This agreement is a binding legal agreement between Stanislav Sipakov and the purchasers or users of AmverTravel. If you do not agree to be bound by this agreement, remove AmverTravel from your device now and, if applicable, promptly return to Stanislav Sipakov by mail any copies of AmverTravel and related documentation and packaging in your possession.
+            
+2. USER AGREEMENT
+2.1 Use Restrictions
+You agree that you have reached the age of majority. You shall use AmverTravel in compliance with all applicable laws and not for any unlawful purpose. Without limiting the foregoing, use, display or distribution of AmverTravel together with material that is pornographic, racist, vulgar, obscene, defamatory, libelous, abusive, promoting hatred, discriminating or displaying prejudice based on religion, ethnic heritage, race, sexual orientation or age is strictly prohibited. We undertake to remove inappropriate content and the user in the event of a complaint within 24 hours. Сomplain about inappropriate content possibly registered in the user system however, if you see inappropriate content we are not responsible           
+
+2.2 Copyright Restriction
+This Software contains copyrighted material, trade secrets and other proprietary material. You shall not, and shall not attempt to, modify, reverse engineer, disassemble or decompile AmverTravel. Nor can you create any derivative works or other works that are based upon or derived from AmverTravel in whole or in part. Stanislav Sipakov's name, logo and graphics file that represents AmverTravel shall not be used in any way to promote products developed with AmverTravel. Stanislav Sipakov retains sole and exclusive ownership of all right, title and interest in and to AmverTravel and all Intellectual Property rights relating thereto. Copyright law and international copyright treaty provisions protect all parts of AmverTravel, products and services. No program, code, part, image, audio sample, or text may be copied or used in any way by the user except as intended within the bounds of the single user program. All rights not expressly granted hereunder are reserved for Stanislav Sipakov.
+            
+2.3 Limitation of Responsibility
+You will indemnify, hold harmless, and defend Stanislav Sipakov , its employees, agents and distributors against any and all claims, proceedings, demand and costs resulting from or in any way connected with your use of Stanislav Sipakov's Software. In no event (including, without limitation, in the event of negligence) will Stanislav Sipakov, its employees, agents or distributors be liable for any consequential, incidental, indirect, special or punitive damages whatsoever (including, without limitation, damages for loss of profits, loss of use, business interruption, loss of information or data, or pecuniary loss), in connection with or arising out of or related to this Agreement, AmverTravel or the use or inability to use AmverTravel or the furnishing, performance or use of any other matters hereunder whether based upon contract, tort or any other theory including negligence.
+            
+2.4 Warranties 
+Except as expressly stated in writing, Stanislav Sipakov makes no representation or warranties in respect of this Software and expressly excludes all other warranties, expressed or implied, oral or written, including, without limitation, any implied warranties of merchantable quality or fitness for a particular purpose
+            
+2.5 Governing Law 
+This Agreement shall be governed by the law of the Russian Federation applicable therein. You hereby irrevocably attorn and submit to the non-exclusive jurisdiction of the courts of Russian Federation therefrom. If any provision shall be considered unlawful, void or otherwise unenforceable, then that provision shall be deemed severable from this License and not affect the validity and enforceability of any other provisions
+
+2.6 Termination
+Any failure to comply with the terms and conditions of this Agreement will result in automatic and immediate termination of this license. Upon termination of this license granted herein for any reason, you agree to immediately cease use of AmverTravel and destroy all copies of AmverTravel supplied under this Agreement. The financial obligations incurred by you shall survive the expiration or termination of this license 
+            
+3. DISCLAIMER OF WARRANTY
+THIS SOFTWARE AND THE ACCOMPANYING FILES ARE GAVE (AS IS) AND WITHOUT WARRANTIES AS TO PERFORMANCE OR MERCHANTABILITY OR ANY OTHER WARRANTIES WHETHER EXPRESSED OR IMPLIED. THIS DISCLAIMER CONCERNS ALL FILES GENERATED AND EDITED BY AmverTravel
+            
+4. CONSENT OF USE OF DATA
+You agree that Stanislav Sipakov may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to AmverTravel. Stanislav Sipakov may also use this information to provide notices to you which may be of use or interest to you.
+        </value>
+    </data>
+    <data name="IAgreeButton" xml:space="preserve">
+    <value>I Agree</value>
+    </data>
+    <!--  ModalObjectionableReasonsPage  -->
+    <data name="AreYouSure" xml:space="preserve">
+    <value>Are you sure?</value>
+    </data>
+    <data name="YourReportHasBeenSentSuccessfully" xml:space="preserve">
+    <value>Your report has been sent successfully</value>
+    </data>
+    <data name="CallDoNotWait" xml:space="preserve">
+    <value>If someone is in immediate danger, call the local emergency service - don't wait</value>
+    </data>
+     <!--  ModalPrivacyPolicyPage  -->
+    <data name="PrivacyPolicy" xml:space="preserve">
+    <value>AmverTravel Privacy Policy
+     
+1. Your privacy is important to us. It is AmverTravel's policy to respect your privacy regarding any information we may collect from you through our app, AmverTravel.
+            
+2. We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we're collecting it and how it will be used.
+            
+3. We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we'll protect within commercially acceptable means to prevent loss and theft, as well as unauthorised access, disclosure, copying, use or modification.
+            
+4. We don't share any personally identifying information publicly or with third-parties, except when required to by law.
+            
+5. Our app may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.
+            
+6. You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.
+            
+7. Your continued use of our website or mobile app will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.
+            
+8. App age limit: 18 years old or legal age in accordance with local law.
+            
+9. This policy is effective as of 25 September 2019.
+        </value>
+    </data>
+    <!--  MyTripPage  -->
+    <data name="QuestionDoYouWantToDeleteTheTravel" xml:space="preserve">
+    <value>Do you want to delete the travel?</value>
+    </data>
+    <data name="TravelSuccessfullyDeleted" xml:space="preserve">
+    <value>Travel successfully deleted</value>
+    </data>
+    <data name="QuestionDidTheTravelTakePlace" xml:space="preserve">
+    <value>Did the travel take place?</value>
+    </data>
+    <!--  Others  -->
+    <data name="Name" xml:space="preserve">
+    <value>Name</value>
+    </data>
+    <data name="SaveButton" xml:space="preserve">
+    <value>Save</value>
+    </data>
+    <data name="IAmFromCity" xml:space="preserve">
+    <value>I am from city</value>
+    </data>
+    <data name="CommentPlaceholderProfile" xml:space="preserve">
+    <value>About yourself</value>
+    </data>
+    <data name="EnterYourCity" xml:space="preserve">
+    <value>enter your city</value>
+    </data>
+    <data name="GenderMale" xml:space="preserve">
+    <value>Male</value>
+    </data>
+    <data name="ProfileUpdated" xml:space="preserve">
+    <value>Profile updated successfully</value>
+    </data>
+    <data name="UserAge" xml:space="preserve">
+    <value>Age:</value>
+    </data>
+    <data name="SendMessageButton" xml:space="preserve">
+    <value>Send message ></value>
+    </data>
+    <data name="FromCountryPlaceholder" xml:space="preserve">
+    <value>From country</value>
+    </data>
+    <data name="CreatedDate" xml:space="preserve">
+    <value>Created date</value>
+    </data>
+    <data name="ToFavorites" xml:space="preserve">
+    <value>To Favorites</value>
+    </data>
+    <data name="InFavorites" xml:space="preserve">
+    <value>In Favorites</value>
+    </data>
+    <data name="Travels" xml:space="preserve">
+    <value>Travels</value>
+    </data>
+    <data name="SearchNow" xml:space="preserve">
+    <value>Search</value>
+    </data>
+    <data name="Complete" xml:space="preserve">
+    <value>Complete travel</value>
+    </data>
+    <data name="TravelSuccessfullyCompleted" xml:space="preserve">
+    <value>The Travel is completed</value>
+    </data>
+    <data name="NudityOrSexualActivity" xml:space="preserve">
+    <value>Nudity or sexual activity</value>
+    </data>
+    <data name="HateSpeechOrSymbols" xml:space="preserve">
+    <value>Hate speech or symbols</value>
+    </data>
+    <data name="ViolenceOrDangerousOrganizations" xml:space="preserve">
+    <value>Violence or dangerous organizations</value>
+    </data>
+    <data name="SaleOfIllegalOrRegularGoods" xml:space="preserve">
+    <value>Sale of illegal or regular goods</value>
+    </data>
+    <data name="BullyingOrHarassment" xml:space="preserve">
+    <value>Bullying or harassment</value>
+    </data>
+    <data name="IntellectualPropertyViolation" xml:space="preserve">
+    <value>Intellectual property violation</value>
+    </data>
+    <data name="SuicideOrSelfInjury" xml:space="preserve">
+    <value>Suicide or self-injury</value>
+    </data>
+    <data name="ScamOrFraud" xml:space="preserve">
+    <value>Scam or fraud</value>
+    </data>
+    <data name="FalseInformation" xml:space="preserve">
+    <value>False information</value>
+    </data>
+    <data name="FavoriteTravels" xml:space="preserve">
+    <value>Favorite travels</value>
+    </data>
+    <data name="MyTravels" xml:space="preserve">
+    <value>My travels</value>
+    </data>
+    <data name="NewMessage" xml:space="preserve">
+    <value>new message</value>
+    </data>
+    <data name="AgeConstraint" xml:space="preserve">
+    <value>You should be a little older</value>
+    </data>
+    <data name="SetProfilePhoto" xml:space="preserve">
+    <value>Do not forget to set your profile photo. This will help you find a fellow traveler faster.</value>
+    </data>
+</root>

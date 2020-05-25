@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             xmlns:forms="clr-namespace:dotMorten.Xamarin.Forms;assembly=dotMorten.Xamarin.Forms.AutoSuggestBox"
+             x:Class="Amver.MobileClient.Views.UpdateTripPage" BackgroundColor="{DynamicResource background}">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+
+            <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout>
+                    <forms:AutoSuggestBox PlaceholderText="{Binding FromCity.Name}" WidthRequest="200"
+                                          Margin="15,5,15,0"
+                                          TextMemberPath="Name"
+                                          DisplayMemberPath="Name"
+                                          TextChanged="FromCity_TextChanged"
+                                          SuggestionChosen="FromCity_SuggestionChosen" HeightRequest="40" BackgroundColor="White" PlaceholderTextColor="Black" TextColor="Black"/>
+                    <forms:AutoSuggestBox PlaceholderText="{Binding ToCountry.Name}" WidthRequest="200"
+                                          Margin="15,0,15,0"
+                                          TextMemberPath="Name"
+                                          DisplayMemberPath="Name"
+                                          TextChanged="ToCountry_TextChanged"
+                                          SuggestionChosen="ToCountry_SuggestionChosen" HeightRequest="40" BackgroundColor="White" PlaceholderTextColor="Black" TextColor="Black"/>
+                    <forms:AutoSuggestBox PlaceholderText="{Binding ToCity.Name}" WidthRequest="200" Margin="15,0,15,0"
+                                          TextMemberPath="Name" DisplayMemberPath="Name"
+                                          TextChanged="ToCity_TextChanged"
+                                          SuggestionChosen="ToCity_SuggestionChosen" HeightRequest="40" BackgroundColor="White" PlaceholderTextColor="Black" TextColor="Black"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition Width="6*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Button Text="Delete" BorderWidth="1" FontSize="Large" Margin="15,15,10,0"
+                                    BorderColor="{DynamicResource button}" BackgroundColor="White" TextColor="IndianRed"
+                                    Clicked="OnDeleteButtonClicked" FontFamily="{DynamicResource NormalFont}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="0">
+                            <Button Text="Save" BorderWidth="1" FontSize="Large" BorderColor="{DynamicResource button}"
+                                    BackgroundColor="White" TextColor="{DynamicResource darkText}" Margin="0,15,15,0"
+                                    Clicked="OnUpdateButtonClicked" FontFamily="{DynamicResource NormalFont}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="0" Grid.Row="1" Margin="15,15,0,0">
+                            <Label Text="{x:Static resources:AppResources.DateFrom}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="2" Margin="15,15,0,0">
+                            <Label Text="{x:Static resources:AppResources.DateTo}"  FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="3" Margin="15,15,0,0">
+                            <Label Text="{x:Static resources:AppResources.PreferredGender}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="4" Margin="15,15,0,0">
+                            <Label Text="{x:Static resources:AppResources.CreatedDate}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="5" Margin="15,15,0,0">
+                            <Label Text="{x:Static resources:AppResources.Comment}" FontFamily="{DynamicResource LightFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1" Grid.Row="1" Margin="0,15,0,0">
+                            <DatePicker MinimumDate="{Binding CurrentDate}"
+                                        MaximumDate="{Binding MaximumDate}"
+                                        Date="{Binding DateFrom}"
+                                        Format="D" HorizontalOptions="StartAndExpand" FontFamily="{DynamicResource MediumFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="2" Margin="0,15,0,0">
+                            <DatePicker MinimumDate="{Binding CurrentDate}"
+                                        MaximumDate="{Binding MaximumDate}"
+                                        Date="{Binding DateTo}"
+                                        Format="D" HorizontalOptions="StartAndExpand" FontFamily="{DynamicResource MediumFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="3" Margin="0,15,0,0">
+                            <Picker x:Name="PreferredGender" HorizontalOptions="StartAndExpand"
+                                    Title="Preferred Gender"
+                                    ItemsSource="{Binding PreferredGenders}"
+                                    SelectedItem="{Binding PreferredGender}" FontFamily="{DynamicResource MediumFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="4" Margin="0,15,0,0">
+                            <Label Text="{Binding CreatedDate}" FontFamily="{DynamicResource MediumFont}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                                     Margin="15,15,15,0">
+                            <Editor Text="{Binding Comment}" Placeholder="{x:Static resources:AppResources.CommentPlaceholder}" MaxLength="250" PlaceholderColor="{DynamicResource darkText}"
+                                    AutoSize="TextChanges" Keyboard="Chat" IsSpellCheckEnabled="false" FontFamily="{DynamicResource NormalFont}" BackgroundColor="{DynamicResource background}" TextColor="{DynamicResource darkText}"/>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+            <AbsoluteLayout
+                AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding IsBusy}">
+                <ActivityIndicator Color="Black"
+                                   AbsoluteLayout.LayoutBounds="0.5,0.5,0.1,0.1"
+                                   AbsoluteLayout.LayoutFlags="All"
+                                   IsVisible="{Binding IsBusy}"
+                                   IsRunning="{Binding IsBusy}" Scale="1.3" />
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

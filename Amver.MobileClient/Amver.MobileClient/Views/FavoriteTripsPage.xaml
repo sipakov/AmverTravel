@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:resources="clr-namespace:Amver.MobileClient.Localization;assembly=Amver.MobileClient"
+             x:Class="Amver.MobileClient.Views.FavoriteTripsPage" BackgroundColor="{DynamicResource background}">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+            <StackLayout>
+                <StackLayout>
+                    <Label Text="{x:Static resources:AppResources.FavoriteTravels}"
+                           FontFamily="{DynamicResource NormalFont}"
+                           FontSize="30"
+                           TextColor="{DynamicResource cardText}" Margin="5,10,0,0" />
+                    <ListView x:Name="TripList"
+                              SeparatorVisibility="None"
+                              HasUnevenRows="True"
+                              ItemsSource="{Binding FavouriteTrips}"
+                              ItemTapped="OnListViewItemSelected" BackgroundColor="{DynamicResource background}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame HasShadow="False"
+                                           BackgroundColor="{DynamicResource card}" Margin="5,5,5,0" CornerRadius="20">
+                                        <Grid ColumnSpacing="0" RowSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="100*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout Orientation="Vertical">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label Text="{Binding FromCity}"
+                                                               FontFamily="{DynamicResource LightFont}"
+                                                               FontSize="20"
+                                                               LineBreakMode="NoWrap"
+                                                               TextColor="{DynamicResource cardText}" />
+                                                        <Label Text="{Binding ToCity}"
+                                                               FontFamily="{DynamicResource MediumFont}"
+                                                               FontSize="20"
+                                                               LineBreakMode="NoWrap"
+                                                               TextColor="{DynamicResource cardText}" />
+                                                    </StackLayout>
+                                                    <Label Text="{Binding DateFromDateTo}"
+                                                           FontFamily="{DynamicResource NormalFont}"
+                                                           FontSize="16"
+                                                           TextColor="{DynamicResource cardText}" />
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <abstractions:CircleImage
+                                                            Source="{Binding UserImageUri}"
+                                                            BackgroundColor="{DynamicResource card}"
+                                                            Aspect="AspectFill"
+                                                            VerticalOptions="CenterAndExpand" HeightRequest="30"
+                                                            WidthRequest="30" />
+                                                        <Label Text="{Binding UserName}"
+                                                               FontFamily="{DynamicResource NormalFont}"
+                                                               VerticalOptions="CenterAndExpand"
+                                                               FontSize="16"
+                                                               TextColor="{DynamicResource cardText}" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                                <StackLayout HorizontalOptions="EndAndExpand">
+                                                    <Image
+                                                        Source="{Binding ImageUri}"
+                                                        BackgroundColor="{DynamicResource card}"
+                                                        Aspect="AspectFit" HeightRequest="80"
+                                                        WidthRequest="80" />
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+            <AbsoluteLayout
+                AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding IsBusy}">
+                <ActivityIndicator Color="Black"
+                                   AbsoluteLayout.LayoutBounds="0.5,0.5,0.1,0.1"
+                                   AbsoluteLayout.LayoutFlags="All"
+                                   IsVisible="{Binding IsBusy}"
+                                   IsRunning="{Binding IsBusy}" Scale="1.3" />
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
