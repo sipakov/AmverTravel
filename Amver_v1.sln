@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amver.WebApi", "Amver.WebApi\Amver.WebApi.csproj", "{090ADCB0-419D-4F27-9FC4-727197C9CD7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amver.Api", "Amver.Api\Amver.Api.csproj", "{090ADCB0-419D-4F27-9FC4-727197C9CD7D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amver.EfCli", "Amver.EfCli\Amver.EfCli.csproj", "{5BB8812B-A1FD-40C6-BD56-623C3DF00AAC}"
 EndProject
@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0461133D
 EndProject
 Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Amver.Libraries.Validation", "Amver.Libraries.Validation\Amver.Libraries.Validation.csproj", "{D4B9C10D-8F9E-4EA3-918E-922FFCA238CC}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Amver.WebApi.Tests", "Amver.WebApi.Tests\Amver.WebApi.Tests.csproj", "{CFC3703C-C42B-45EF-8399-7501BAFF3F25}"
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Amver.Api.Tests", "Amver.Api.Tests\Amver.Api.Tests.csproj", "{CFC3703C-C42B-45EF-8399-7501BAFF3F25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationCityAndCountryTable", "LocalizationCityAndCountryTable\LocalizationCityAndCountryTable.csproj", "{88AF8402-4C75-442A-8B32-BCD4E91A1D4A}"
 EndProject
