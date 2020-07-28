@@ -1,16 +1,19 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Amver.Api.Implementations.City;
 using Amver.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+using Amver.EfCli;
+using DeepEqual.Syntax;
 using NUnit.Framework;
 
 namespace Amver.Api.Tests.City
 {
     [TestFixture]
-    public class CityFromStorageGetterTests : TestWithSqLite
+    public class CityFromStorageGetterTests
     {
+        private static IContextFactory<ApplicationContext> _contextFactory;
+        private static ApplicationContext _applicationContext;
+
         [SetUp]
         public void SetUp()
         {
@@ -74,31 +77,100 @@ namespace Amver.Api.Tests.City
                     CountryId = 1
                 },
             };
-            DbContext.Countries.AddRange(countries);
-            DbContext.SaveChanges();
-            DbContext.Cities.AddRange(cities);
+            _contextFactory = new ConnectionFactory();
+            _applicationContext = _contextFactory.CreateContext();
+            _applicationContext.Countries.AddRange(countries);
+            _applicationContext.SaveChanges();
+            _applicationContext.Cities.AddRange(cities);
+            _applicationContext.SaveChanges();
         }
 
         [Test]
-        public void TableShouldGetCreated()
-        {
-            Assert.False(DbContext.Cities.Any());
-        }
-
-        [Test]
-        public void GetListHaveCorrectEnNamesAndRelations()
+        public void Resulting_List_Has_Correct_En_Objects()
         {
             //Arrange
-            var targetNamePart = "to";
-            //Act
-            using (var context = new DbContext(null))
+            const string targetNamePart = "to";
+            const int targetCountryId = 1;
+            var expectedModels = new List<Domain.Entities.City>
             {
-                var targetCityList = new CityFromStorageGetter(context);
-   
-            }
-
-
-            Assert.Equals(Guid.Empty, newItem.Id);
+                new Domain.Entities.City
+                {
+                    Id = 1,
+                    Name = "Tobolsk",
+                    ruRu = "Тобольск",
+                    CountryId = 1,
+                    Country = new Country
+                    {
+                        Id = 1,
+                        Name = "Russia",
+                        ruRu = "Россия"
+                    },
+                },
+                new Domain.Entities.City
+                {
+                    Id = 3,
+                    Name = "Tomsk",
+                    ruRu = "Томск",
+                    CountryId = 1,
+                    Country = new Country
+                    {
+                        Id = 1,
+                        Name = "Russia",
+                        ruRu = "Россия"
+                    },
+                },
+            };
+            //Act
+            var storage = new CityFromStorageGetter(_contextFactory);
+            var result = storage.GetListByNamePart(targetNamePart, targetCountryId, _applicationContext).Result
+                .ToList();
+            //Arrange
+            Assert.AreEqual(expectedModels.Count, result.Count);
+            expectedModels.ShouldDeepEqual(result);
+        }
+        
+        [Test]
+        public void Resulting_List_Has_Correct_Ru_Objects()
+        {
+            //Arrange
+            const string targetNamePart = "то";
+            const int targetCountryId = 1;
+            var expectedModels = new List<Domain.Entities.City>
+            {
+                new Domain.Entities.City
+                {
+                    Id = 1,
+                    Name = "Tobolsk",
+                    ruRu = "Тобольск",
+                    CountryId = 1,
+                    Country = new Country
+                    {
+                        Id = 1,
+                        Name = "Russia",
+                        ruRu = "Россия"
+                    },
+                },
+                new Domain.Entities.City
+                {
+                    Id = 3,
+                    Name = "Tomsk",
+                    ruRu = "Томск",
+                    CountryId = 1,
+                    Country = new Country
+                    {
+                        Id = 1,
+                        Name = "Russia",
+                        ruRu = "Россия"
+                    },
+                },
+            };
+            //Act
+            var storage = new CityFromStorageGetter(_contextFactory);
+            var result = storage.GetListByNamePartRu(targetNamePart, targetCountryId, _applicationContext).Result
+                .ToList();
+            //Arrange
+            Assert.AreEqual(expectedModels.Count, result.Count);
+            expectedModels.ShouldDeepEqual(result);
         }
     }
 }

@@ -6,11 +6,10 @@ using Microsoft.Extensions.Logging;
 
 namespace Amver.EfCli
 {
-    public sealed class ApplicationContext : DbContext
+    public class ApplicationContext : DbContext
     {
         public ApplicationContext()
         {
-
         }
 
         public ApplicationContext(int timeOut)
@@ -30,11 +29,7 @@ namespace Amver.EfCli
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var appConnectionString = Configurator.GetConfiguration().GetConnectionString("PostgreSqlConnection");
-            if (optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseNpgsql(appConnectionString);
-            }
-            else
+            if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseLoggerFactory(Factory).UseNpgsql(appConnectionString);
             }

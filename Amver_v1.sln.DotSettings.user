@@ -10,10 +10,35 @@
 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/AutoDetectedNamingRules/=Parameters/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
 	<s:Boolean x:Key="/Default/CodeStyle/Naming/CSharpNaming/ApplyAutoDetectedRules/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeStyle/Naming/CSharpAutoNaming/IsNamingAutoDetectionCompleted/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=afe2c3c9_002D239d_002D4d0f_002D99fa_002Df043fbb0753d/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="Create_writes_to_database" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.User.UserServiceTests.Create_writes_to_database&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.City.CityFromStorageGetterTests.TableShouldGetCreated&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=067548d5_002D8ada_002D43c7_002D88e9_002Dee772ab769c9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TableShouldGetCreated #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.City.CityFromStorageGetterTests.TableShouldGetCreated&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6c5b8151_002D28e1_002D4151_002D96de_002D4fd8bf5a3736/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TableShouldGetCreated #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.City.CityFromStorageGetterTests.TableShouldGetCreated&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=afe2c3c9_002D239d_002D4d0f_002D99fa_002Df043fbb0753d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_writes_to_database" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.User.UserServiceTests.Create_writes_to_database&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.City.CityFromStorageGetterTests.TableShouldGetCreated&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b7967c34_002D1d7a_002D4928_002D8e7d_002Dff30062c667a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TableShouldGetCreated" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.City.CityFromStorageGetterTests.TableShouldGetCreated&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f77dac79_002Dd283_002D4f5f_002Db02f_002D23bea2b8e217/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TableShouldGetCreated #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.City.CityFromStorageGetterTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::CFC3703C-C42B-45EF-8399-7501BAFF3F25::.NETCoreApp,Version=v3.1::Amver.Api.Tests.City.CityFactoryCreatorTests.Resulting_List_Has_Correct_En_Objects&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Amver/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

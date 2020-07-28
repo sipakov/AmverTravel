@@ -18,10 +18,10 @@ namespace Amver.Api.Implementations.City
             _contextFactory = contextFactory ?? throw new ArgumentNullException(nameof(contextFactory));
         }
 
-        public async Task<IEnumerable<Domain.Entities.City>> GetListByNamePart(string namePart, int countryId)
+        public async Task<IEnumerable<Domain.Entities.City>> GetListByNamePart(string namePart, int countryId, ApplicationContext context)
         {
-            await using var context = _contextFactory.CreateContext();
-            var queryableTrip = context.Cities.Include(x => x.Country).AsQueryable();
+            var targetContext = context ?? _contextFactory.CreateContext();
+            var queryableTrip = targetContext.Cities.Include(x => x.Country).AsQueryable();
             var upperNamePart = namePart.First().ToString().ToUpper() + namePart.Substring(1);
             if (countryId > 0)
             {
@@ -35,10 +35,10 @@ namespace Amver.Api.Implementations.City
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Domain.Entities.City>> GetListByNamePartRu(string namePart, int countryId)
+        public async Task<IEnumerable<Domain.Entities.City>> GetListByNamePartRu(string namePart, int countryId, ApplicationContext context)
         {
-            await using var context = _contextFactory.CreateContext();
-            var queryableTrip = context.Cities.Include(x => x.Country).AsQueryable();
+            var targetContext = context ?? _contextFactory.CreateContext();
+            var queryableTrip = targetContext.Cities.Include(x => x.Country).AsQueryable();
             var upperNamePart = namePart.First().ToString().ToUpper() + namePart.Substring(1);
             if (countryId > 0)
             {
